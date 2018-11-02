@@ -38,6 +38,11 @@ class Operator
      */
     private $fullDescription;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=no)
+     */
+    private $content;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +92,25 @@ class Operator
     public function setFullDescription(?string $fullDescription): self
     {
         $this->fullDescription = $fullDescription;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param mixed $content
+     * @return Operator
+     */
+    public function setContent($content): self
+    {
+        $this->content = $content;
 
         return $this;
     }
