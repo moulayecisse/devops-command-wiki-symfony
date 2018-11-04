@@ -13,9 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource()
- * @ORM\Entity(repositoryClass="App\Repository\OperatorRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ArgumentRepository")
  */
-class Operator
+class Argument
 {
     use IdTrait;
     use NameTrait;
